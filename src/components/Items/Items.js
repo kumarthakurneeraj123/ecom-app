@@ -54,9 +54,9 @@ const Items = ()=>{
             <span>Colors</span>
             <div className={classes.item1}>
         {productsArr.map((item)=><div className={classes.items}>
-
+       <div> {item.title}</div>
                 <img src={item.imageUrl} alt="" />
-                <div>{item.title} ${item.price}</div>
+                <div> ${item.price}<button>Add to Cart</button></div>
 
             </div>
         )}

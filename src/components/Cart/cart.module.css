@@ -1,0 +1,21 @@
+
+.cart{
+   position: relative;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    float: inline-end;
+    text-align: center;
+    background: white;
+    color:black;
+    height:auto;
+    width:40%;
+    margin-left: 60%;
+}
+.cart div{
+    background-color: white;
+}
+.cart label{
+    margin-left: 2rem;
+    text-decoration: underline;
+}
+
