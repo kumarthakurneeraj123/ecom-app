@@ -1,0 +1,15 @@
+.main-header {
+
+   
+    width: 100%;
+    height: 5rem;
+
+   
+    align-items: center;
+    background: black;
+    
+  }
+  
+  .main-header h1 {
+    color: white;
+  }
