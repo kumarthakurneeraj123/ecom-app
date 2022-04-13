@@ -8,6 +8,7 @@ import Generics from './components/Generics/Generics';
 import CartProvider from './store/CartProvider';
 import Footer from './components/Footer/Footer';
 import AboutUs from './components/About/AboutUs';
+import Home from './components/Home/Home';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
        </Route>
        <Route path='/AboutUs'>
        <AboutUs />
+       </Route>
+       <Route path='/Home'>
+       <Home />
        </Route>
        <Footer />
     </CartProvider>

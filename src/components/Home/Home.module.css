@@ -8,12 +8,23 @@
     background: gainsboro;
     overflow: auto;
 }
-.span{
-    text-align: center;
-    font-size: 4rem;
+.latest{
+    font-size: 30px;
+    font-style: italic;
 }
-.pre{
-    text-align: justify;
-    font-size: 1rem;
-    font-family: fantasy;
+.tour{
+    text-align: center;
+    font-size: 80px;
+}
+.spans{
+    
+    text-align: center;
+   
+}
+.spans span{
+    padding-left: 2rem;
+}
+.span{
+   
+    color: aqua;
 }
