@@ -11,8 +11,13 @@ const Cart = (props)=>{
         props.onClose();
     }
     const purchaseHandler =()=>{
-        if(cartCtx.items.length>0)
+        if(cartCtx.items.length>0){
             alert('Thanks for purchase');
+            
+           closeHandler();
+           
+
+        }
         else{
             alert('You do not have any item in cart! Please add items in cart.')
         }

@@ -7,7 +7,6 @@ const MainHeader = (props)=>{
 
     return <header className={classes['main-header']}>
         <Navigation />
-    
-    </header>
+       </header>
 }
 export default MainHeader;

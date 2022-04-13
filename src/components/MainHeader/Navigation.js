@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import React,{useState, useContext} from 'react';
 
 import classes from './navigation.module.css';
@@ -21,9 +23,9 @@ const Navigation = ()=>{
                 totalQuantity = totalQuantity + amount[i];
           }
     return <nav className={classes.nav}>
-        <a href='/'>Home</a>
-        <a href='/'>Store</a>
-        <a href='/'>About</a>
+        <NavLink to='/Home'>Home</NavLink>
+        <NavLink to='/Generics'>Store</NavLink>
+        <NavLink to='/AboutUs'>About</NavLink>
         <button onClick={cartHandler}>Cart <span>{totalQuantity}</span></button>
         {isCartClicked && <Cart onClose={hideCartHandler}/>}
         
