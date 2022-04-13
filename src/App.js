@@ -3,14 +3,15 @@ import './App.css';
 
 import MainHeader from './components/MainHeader/MainHeader';
 import Generics from './components/Generics/Generics';
+import CartProvider from './store/CartProvider';
 
 
 function App() {
   return (
-    <React.Fragment>
+    <CartProvider defaultValue>
        <MainHeader />
-    <Generics />
-    </React.Fragment>
+       <Generics />
+    </CartProvider>
   );
 }
 

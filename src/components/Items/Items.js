@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
 
 import classes from './items.module.css';
+import CartContext from '../../store/cart-context';
+import CartProvider from '../../store/CartProvider';
+
 
 const productsArr = [
 
     {
+    id:'e1',
     
     title: 'Colors',
     
@@ -15,6 +19,7 @@ const productsArr = [
     },
     
     {
+        id:'e2',
     
     title: 'Black and white Colors',
     
@@ -25,6 +30,7 @@ const productsArr = [
     },
     
     {
+        id:'e3',
     
     title: 'Yellow and Black Colors',
     
@@ -35,7 +41,7 @@ const productsArr = [
     },
     
     {
-    
+        id:'e4',
     title: 'Blue Color',
     
     price: 100,
@@ -47,16 +53,30 @@ const productsArr = [
     ]
     
     
-const Items = ()=>{
-
+const Items = (props)=>{
+    const cartCtx = useContext(CartContext);
+    
+    const addItemToCartHandler = (item)=>{
+       
+        cartCtx.addItem({
+            id:item.id,
+            title:item.title,
+            imageUrl:item.imageUrl,
+            price:item.price,
+            amount:1
+        })
+        console.log(cartCtx.items);
+    }
     return (
+
         <React.Fragment >
             <span>Colors</span>
+            {console.log('Inside a item map')}
             <div className={classes.item1}>
-        {productsArr.map((item)=><div className={classes.items}>
+        {productsArr.map((item)=><div key={item.id} className={classes.items}>
        <div> {item.title}</div>
                 <img src={item.imageUrl} alt="" />
-                <div> ${item.price}<button>Add to Cart</button></div>
+                <div> ${item.price}<button onClick={addItemToCartHandler.bind(null,item)}>Add to Cart</button></div>
 
             </div>
         )}

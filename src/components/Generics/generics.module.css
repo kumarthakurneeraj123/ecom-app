@@ -1,9 +1,10 @@
 .generics {
- 
+   max-height: 30rem;
     text-align: center;
     font-size: 90px;
     font-family: 'Times New Roman', Times, serif;
     background: gainsboro;
+    overflow: auto;
     
   }
  

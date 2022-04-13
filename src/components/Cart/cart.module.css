@@ -1,8 +1,8 @@
 
 .cart{
    position: relative;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
     float: inline-end;
     text-align: center;
     background: white;
@@ -10,12 +10,13 @@
     height:auto;
     width:40%;
     margin-left: 60%;
+    max-height: 30rem;;
 }
 .cart div{
     background-color: white;
 }
 .cart label{
-    margin-left: 2rem;
+    margin-left: 6rem;
     text-decoration: underline;
 }
 

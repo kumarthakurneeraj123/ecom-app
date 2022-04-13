@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useContext} from 'react';
 
 import classes from './cart.module.css';
 import CartItems from './CartItems';
+import CartContext from '../../store/cart-context';
 
 const Cart = (props)=>{
+    const cartCtx = useContext(CartContext);
+
     const closeHandler = () =>{
         props.onClose();
+    }
+    const purchaseHandler =()=>{
+        if(cartCtx.items.length>0)
+            alert('Thanks for purchase');
+        else{
+            alert('You do not have any item in cart! Please add items in cart.')
+        }
     }
 return (
     <div className={classes.cart}>
@@ -20,12 +30,12 @@ return (
         <label>PRICE</label>
         <label>QUANTITY</label>
         </div>
-        <CartItems />
+        <CartItems  />
         <div>
-            Total $ 0
+            Total ${cartCtx.totalAmount}
         </div>
         <div>
-            <button>PURCHASE</button>
+            <button onClick={purchaseHandler}>PURCHASE</button>
         </div>
     </div>
 );

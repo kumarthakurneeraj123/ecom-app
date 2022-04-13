@@ -1,55 +1,26 @@
-import React,{Fragment} from 'react';
+import React,{Fragment, useContext} from 'react';
 
-const cartElements = [
+import classes from './cartItem.module.css';
+import CartContext from '../../store/cart-context';
 
-    {
-    
-    title: 'Colors',
-    
-    price: 100,
-    
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-    
-    quantity: 2,
-    
-    },
-    
-    {
-    
-    title: 'Black and white Colors',
-    
-    price: 50,
-    
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-    
-    quantity: 3,
-    
-    },
-    
-    {
-    
-    title: 'Yellow and Black Colors',
-    
-    price: 70,
-    
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-    
-    quantity: 1,
-    
-    }
-    
-    ]
+
 const CartItems = (props)=>{
+
+    const cartCtx = useContext(CartContext);
+    const removeItemFromCartHandler = (id)=>{
+        cartCtx.removeItem(id);
+    }
 
     return(
         <Fragment>
+            {console.log(cartCtx.items)}
             {
-                cartElements.map((item)=><div>
-                    <div><img src={item.imageUrl} alt='Products Images' />
-                    {item.title}
-                    {item.price}
-                    <input type='number' value={item.quantity}/>
-                    <button>Remove</button>
+               cartCtx.items.map((item)=><div key = {item.id}>
+                    <div className={classes.div}><img src={item.imageUrl} alt='Products Images' />
+                    <span className={classes.span}>{item.title}</span>
+                      <span className={classes.span}>${item.price}</span>
+                    <input step="1" type='number' value={item.amount} />
+                    <button onClick={removeItemFromCartHandler.bind(null,item.id)}>Remove</button>
                     </div>
                 </div>)
             } 

@@ -1,0 +1,19 @@
+div{
+    border-bottom: 1px solid black;
+}
+.div img{
+    margin-left: 0%;
+    width: 110px;
+    height:110px;
+}
+.div input{
+    margin-left: 5rem;
+    width: 40px;
+}
+.span {
+margin-left: 1rem;
+
+}
+.div button{
+    background: blue;
+}
