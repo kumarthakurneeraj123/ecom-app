@@ -1,0 +1,48 @@
+.generic{
+    
+    padding-top: 10rem;
+    max-height: 20rem;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    background: gainsboro;
+    overflow: auto;
+}
+
+form {
+    width: 80%;
+    margin: 10px;
+    padding: 30px;
+  }
+  
+  label,
+  input {
+    /* In order to define widths */
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  label {
+    width: 30%;
+    /* Positions the label text beside the input */
+    text-align: right;
+  }
+  
+  label+input {
+    width: 30%;
+    /* Large margin-right to force the next element to the new-line
+             and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+  }
+  
+  
+  /* Only the submit button is matched by this selector,
+         but to be sure you could use an id or class for that button */
+  
+  input+input {
+    float: right;
+  }
+  button {
+      margin-left: 550px;
+      background-color: aqua;
+  }

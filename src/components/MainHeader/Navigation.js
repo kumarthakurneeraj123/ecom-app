@@ -26,6 +26,7 @@ const Navigation = ()=>{
         <NavLink to='/Home'>Home</NavLink>
         <NavLink to='/Generics'>Store</NavLink>
         <NavLink to='/AboutUs'>About</NavLink>
+        <NavLink to='/ContactUs'>Contact Us</NavLink>
         <button onClick={cartHandler}>Cart <span>{totalQuantity}</span></button>
         {isCartClicked && <Cart onClose={hideCartHandler}/>}
         

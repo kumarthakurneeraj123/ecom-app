@@ -7,7 +7,7 @@ return (
     <footer className={classes.footer}>
 
 The Generics
-    <a href='https://www.youtube.com'>youtube</a>
+    <a href='https://www.youtube.com'>Youtube</a>
     <a href='https://www.facebook.com'>Facebook</a>
 
 </footer>

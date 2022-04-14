@@ -9,11 +9,12 @@ import CartProvider from './store/CartProvider';
 import Footer from './components/Footer/Footer';
 import AboutUs from './components/About/AboutUs';
 import Home from './components/Home/Home';
+import ContactUs from './components/ContactUs/ContactUs';
 
 
 function App() {
   return (
-    <CartProvider defaultValue>
+    <CartProvider >
        <MainHeader />
        <Route path='/Generics'>
        <Generics />
@@ -23,6 +24,9 @@ function App() {
        </Route>
        <Route path='/Home'>
        <Home />
+       </Route>
+       <Route path='/ContactUs'>
+       <ContactUs />
        </Route>
        <Footer />
     </CartProvider>
