@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import AboutUs from './components/About/AboutUs';
 import Home from './components/Home/Home';
 import ContactUs from './components/ContactUs/ContactUs';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
        </Route>
        <Route path='/ContactUs'>
        <ContactUs />
+       </Route>
+       <Route path='/ProductDetails'>
+        <ProductDetails />
        </Route>
        <Footer />
     </CartProvider>

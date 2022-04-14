@@ -2,12 +2,14 @@ import React from 'react';
 
 import classes from './AboutUs.module.css';
 
+
 const AboutUs=()=>{
 
     return (
         <React.Fragment>
             <div className ={classes.generic}>The Generics</div>
             <div className={classes.span}>ABOUT</div>
+            
             
 <pre className={classes.pre}>
            

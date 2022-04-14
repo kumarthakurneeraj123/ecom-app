@@ -23,10 +23,10 @@ const Navigation = ()=>{
                 totalQuantity = totalQuantity + amount[i];
           }
     return <nav className={classes.nav}>
-        <NavLink to='/Home'>Home</NavLink>
-        <NavLink to='/Generics'>Store</NavLink>
-        <NavLink to='/AboutUs'>About</NavLink>
-        <NavLink to='/ContactUs'>Contact Us</NavLink>
+        <NavLink activeClassName={classes.active}  to='/Home'>Home</NavLink>
+        <NavLink activeClassName={classes.active}  to='/Generics'>Store</NavLink>
+        <NavLink activeClassName={classes.active}  to='/AboutUs'>About</NavLink>
+        <NavLink activeClassName={classes.active} to='/ContactUs'>Contact Us</NavLink>
         <button onClick={cartHandler}>Cart <span>{totalQuantity}</span></button>
         {isCartClicked && <Cart onClose={hideCartHandler}/>}
         

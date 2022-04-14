@@ -1,4 +1,5 @@
 import React,{useContext} from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './items.module.css';
 import CartContext from '../../store/cart-context';
@@ -75,7 +76,7 @@ const Items = (props)=>{
             <div className={classes.item1}>
         {productsArr.map((item)=><div key={item.id} className={classes.items}>
        <div> {item.title}</div>
-                <img src={item.imageUrl} alt="" />
+              <Link to='/ProductDetails'> <img src={item.imageUrl} alt="" /></Link> 
                 <div> ${item.price}<button onClick={addItemToCartHandler.bind(null,item)}>Add to Cart</button></div>
 
             </div>
