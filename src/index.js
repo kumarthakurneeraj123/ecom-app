@@ -5,12 +5,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ContextProvider from './store/auth-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <ContextProvider>
   <BrowserRouter>
       <App />
   </BrowserRouter>
+  </ContextProvider>
 );
 
 

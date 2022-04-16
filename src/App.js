@@ -1,4 +1,5 @@
-import {Route} from 'react-router-dom';
+import {Route, Redirect} from 'react-router-dom';
+import { useContext } from 'react';
 
 import React from 'react';
 import './App.css';
@@ -11,27 +12,34 @@ import AboutUs from './components/About/AboutUs';
 import Home from './components/Home/Home';
 import ContactUs from './components/ContactUs/ContactUs';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import AuthForm from './components/Auth/AuthForm';
+import { AuthContext } from './store/auth-context';
 
 
 function App() {
+  const authCtx = useContext(AuthContext);
   return (
     <CartProvider >
        <MainHeader />
-       <Route path='/Generics'>
+       {authCtx.isLogIn && <Route path='/Generics'>
        <Generics />
-       </Route>
-       <Route path='/AboutUs'>
+       </Route>}
+      {authCtx.isLogIn && <Route path='/AboutUs'>
        <AboutUs />
-       </Route>
-       <Route path='/Home'>
+       </Route>}
+      {authCtx.isLogIn && <Route path='/Home'>
        <Home />
-       </Route>
-       <Route path='/ContactUs'>
+       </Route>}
+       {authCtx.isLogIn &&<Route path='/ContactUs'>
        <ContactUs />
-       </Route>
-       <Route path='/ProductDetails'>
+       </Route>}
+      {authCtx.isLogIn && <Route path='/ProductDetails'>
         <ProductDetails />
-       </Route>
+        </Route>}
+       {!authCtx.isLogIn && <Route>
+         <AuthForm path='/Auth' />
+       </Route>}
+       
        <Footer />
     </CartProvider>
   );
