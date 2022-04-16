@@ -6,14 +6,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ContextProvider from './store/auth-context';
+import CartProvider from './store/CartProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <ContextProvider>
+    <CartProvider>
   <BrowserRouter>
       <App />
   </BrowserRouter>
+  </CartProvider>
   </ContextProvider>
+
 );
 
 

@@ -1,6 +1,7 @@
 import {Route, Redirect} from 'react-router-dom';
 import { useContext } from 'react';
 
+
 import React from 'react';
 import './App.css';
 
@@ -19,7 +20,7 @@ import { AuthContext } from './store/auth-context';
 function App() {
   const authCtx = useContext(AuthContext);
   return (
-    <CartProvider >
+    <React.Fragment >
        <MainHeader />
        {authCtx.isLogIn && <Route path='/Generics'>
        <Generics />
@@ -39,9 +40,8 @@ function App() {
        {!authCtx.isLogIn && <Route>
          <AuthForm path='/Auth' />
        </Route>}
-       
-       <Footer />
-    </CartProvider>
+        <Footer />
+    </React.Fragment>
   );
 }
 

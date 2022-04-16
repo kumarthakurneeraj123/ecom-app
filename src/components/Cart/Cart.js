@@ -31,9 +31,10 @@ return (
         <label>Cart</label>
         </div>
         <div>
-        <label>ITEM</label>
-        <label>PRICE</label>
-        <label>QUANTITY</label>
+        <label className={classes.label}
+        >ITEM</label>
+        <label className={classes.label}>PRICE</label>
+        <label className={classes.label}>QUANTITY</label>
         </div>
         <CartItems  />
         <div>

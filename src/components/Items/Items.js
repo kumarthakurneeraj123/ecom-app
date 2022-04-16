@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import classes from './items.module.css';
 import CartContext from '../../store/cart-context';
 import CartProvider from '../../store/CartProvider';
+import axios from 'axios';
 
 
 const productsArr = [
@@ -55,6 +56,7 @@ const productsArr = [
     
     
 const Items = (props)=>{
+  
     const cartCtx = useContext(CartContext);
     
     const addItemToCartHandler = (item)=>{
@@ -66,13 +68,12 @@ const Items = (props)=>{
             price:item.price,
             amount:1
         })
-        console.log(cartCtx.items);
+
     }
     return (
 
         <React.Fragment >
             <span>Colors</span>
-            {console.log('Inside a item map')}
             <div className={classes.item1}>
         {productsArr.map((item)=><div key={item.id} className={classes.items}>
        <div> {item.title}</div>

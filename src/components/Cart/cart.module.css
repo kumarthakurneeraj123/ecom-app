@@ -15,8 +15,11 @@
 .cart div{
     background-color: white;
 }
-.cart label{
-    margin-left: 6rem;
-    text-decoration: underline;
+.label{
+    display:inline;
+      
+        justify-content: space-between;
+    
+    font-size: 100%;
 }
 

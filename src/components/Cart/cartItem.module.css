@@ -1,4 +1,4 @@
-div{
+.div{
     border-bottom: 1px solid black;
 }
 .div img{
@@ -12,7 +12,6 @@ div{
 }
 .span {
 margin-left: 1rem;
-
 }
 .div button{
     background: blue;

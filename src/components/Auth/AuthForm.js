@@ -38,7 +38,7 @@ const AuthForm = ()=>{
             }
             
         }).then(data=>{
-            authCtx.login(data.idToken);
+            authCtx.login(data.idToken, data.email);
             alert("Logged in successfully!");
             console.log(data);
             history.replace('/Generics');
